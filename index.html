@@ -39,7 +39,7 @@
       }
 
       function updateConversionUrl() {
-        let aEl = document.querySelector('[data-to-offer]');
+        let aEl = document.querySelector('[data-to-conv]');
         let params = new URLSearchParams(window.location.search);
         let clickid = params.get('clickid');
         let href = `https://pandatrck.com/click.php?cnv_id=${clickid}&payout=50`;
