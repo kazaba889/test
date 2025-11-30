@@ -42,7 +42,8 @@
         let aEl = document.querySelector('[data-to-offer]');
         let params = new URLSearchParams(window.location.search);
         let clickid = params.get('clickid');
-        let href = `https://pandatrck.com/click.php?cnv_id=${clickid}&payout=50`
+        let href = `https://pandatrck.com/click.php?cnv_id=${clickid}&payout=50`;
+        aEl.setAttribute('href', href);
       }
       
       updateToOfferUrl();
