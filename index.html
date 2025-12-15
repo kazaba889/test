@@ -10,10 +10,10 @@
     </script>
   </head>
   <body>
-    qui  page
-
-    <a href="https://pandatrck.com/click.php?lp=1">to offer</a>
-
+    quiz page
+    <br>
+    <a data-cta href="https://pandatrck.com/click.php?lp=1">to offer</a>
+    <br>
     <button type="button" data-e1-btn onclick="trackE1()">track event 1</button>
       <script>
 
@@ -25,6 +25,21 @@
             }
           })
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let urlParams = new URLSearchParams(window.location.search);
+            let bcid = urlParams.get('bcid');
+            if (bcid) {
+                let links = document.querySelectorAll('a[data-cta]');
+                links.forEach(function(link) {
+                    let currentHref = link.getAttribute('href');
+                    if (currentHref) {
+                        let separator = currentHref.includes('?') ? '&' : '?';
+                        link.setAttribute('href', currentHref + separator + 'bcid=' + bcid);
+                    }
+                });
+            }
+        });
       </script>
   </body>
 </html>
