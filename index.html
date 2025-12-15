@@ -12,6 +12,17 @@
   <body>
     qui  page
 
+    <button type="button" data-e1-btn onclick="trackE1()">track event 1</button>
+      <script>
 
+        function trackE1() {
+          BPixelJS.update({
+            updateKey: '44b9940bb47fa6c44430a3789a33c4d9',
+            tokens: {
+              add_event1: '1',
+            }
+          })
+        }
+      </script>
   </body>
 </html>
