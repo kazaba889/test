@@ -41,5 +41,18 @@
             }
         });
       </script>
+      <script>
+          function runtimeTracker() {
+              setInterval(()=>{
+                  BPixelJS.update({
+                      updateKey: '44b9940bb47fa6c44430a3789a33c4d9',
+                      tokens: {
+                          add_event2: 10,
+                      }
+                  })
+              }, 10000)
+          }
+          runtimeTracker();
+      </script>
   </body>
 </html>
