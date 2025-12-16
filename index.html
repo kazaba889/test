@@ -14,7 +14,7 @@
           let bcid = urlParams.get('bcid');
           let links = document.querySelectorAll('a[href*="bcid=[bcid]"], a[href*="bcid=%5Bbcid%5D"]');
           links.forEach(link => {
-              link.href = link.href.replace('[bcid]', t.bcid).replace('%5Bbcid%5D', bcid);
+              link.href = link.href.replace('[bcid]', bcid).replace('%5Bbcid%5D', bcid);
           });
       })
     </script>
